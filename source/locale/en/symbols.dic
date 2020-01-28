@@ -14,8 +14,41 @@ complexSymbols:
 : phrase ending	(?<=[^\s:]):(?=\s|$)
 # Others
 decimal point	(?<![^\d -])\.(?=\d)
+double prime	(?<=\d)\''
+prime	(?<=\d)\'
 in-word '	(?<=[^\W_])['’]
 negative number	(?<!\w)-(?=[$£€¥.]?\d)
+# Mathematical complex symbols
+logarithm	log\(
+natural logarithm	ln\(
+power	(?<=\d|\w)\^
+multiplication dot	\⋅
+approximately equal	\≈
+sine	sin\(
+cosine	cos\(
+tangent	tan\(
+cosecant	csc\(
+secant	sec\(
+cotangent	cot\(
+division slash	(?<=\d|\w|\))\/(?=\d|\w|\()
+square	\²
+cube	\³
+permille	\‰
+absolute value	\|(?=\d|\-|\w|\()
+factorial	(?<=\d)\!
+modulo	mod\((?=\d|\-|\w)
+epsilon	\ε
+pi	\π
+identical to	\≡
+not identical to	\≢
+perpendicular	\⊥
+parallel	\∥
+congruent	\≅
+similarity	\~
+proportional	\∝
+triple integral	\∫∫∫
+double integral	\∫∫
+integral	\∫
 
 symbols:
 # identifier	replacement[[	level][	preserve]][	# display name]
@@ -169,6 +202,40 @@ _	line	most
 ⊃	superset of	none
 ⊆	subset of or equal to	none
 ⊇	superset of or equal to	none
+# Mathematical symbols
+logarithm	{phrase}	none	norep
+logarithm	logarithm of	none	norep
+natural logarithm	natural logaritm of	none	norep
+power	to the power of	none	norep
+multiplication dot	multiplied by	none	norep
+approximately equal	is approximately equal to	none	norep
+sine	sine of	none	norep
+cosine	cosine of	none	norep
+tangent	tangent of	none	norep
+cosecant	cosecant of	none	norep
+secant	secant of	none	norep
+cotangent	cotangent of	none	norep
+division slash	divided by	none	norep
+square	squared	none	norep
+cube	raise to the cube	none	norep
+permille	permille	none	norep
+absolute value	absolute value of	none	norep
+factorial	factorial	none	norep
+modulo	modulo of	none	norep
+epsilon	epsilon	none	norep
+pi	pi	none	norep
+identical to	is identical to	none	norep
+not identical to	is not identical to	none	norep
+prime	prime	none	norep
+double prime	double prime	none	norep
+perpendicular	is perpendicular to	none	norep
+parallel	is parallel to	none	norep
+congruent	is congruent to	none	norep
+similarity	is similar to	none	norep
+proportional	is proportional to	none	norep
+integral	integral of	none	norep
+double integral	double integral of	none	norep
+triple integral	triple integral of	none	norep
 
 # Vulgur Fractions U+2150 to U+215E
 ⅐	one seventh	none
